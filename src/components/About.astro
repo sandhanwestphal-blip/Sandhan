@@ -1,0 +1,129 @@
+---
+const timeline = [
+  {
+    year: "1982",
+    text: "Beginn der spirituellen Praxis — Meditation, Körperarbeit und erste Begegnung mit östlicher Philosophie.",
+  },
+  {
+    year: "1990er",
+    text: "Längere Aufenthalte in indischen Ashrams. Vertiefung in Vipassana und ZaZen. Begegnung mit großen Lehrern.",
+  },
+  {
+    year: "2000er",
+    text: "Führung eines mittelständischen Unternehmens. Integration spiritueller Praxis in Führung und Alltag.",
+  },
+  {
+    year: "2015",
+    text: "Fokus auf Beratung und Begleitung. NLP- und Hypnoseausbildung nach Milton Erickson.",
+  },
+];
+---
+
+<section class="about" id="ueber-mich">
+  <div class="about__inner">
+    <div class="about__text">
+      <p class="section__eyebrow">Über mich</p>
+      <h2 class="section__title">Vier Jahrzehnte gelebter Erfahrung</h2>
+      <p>
+        Mein Weg führte mich vom Musikkonservatorium über Jahre in indischen Ashrams bis zur
+        Führung eines mittelständischen Unternehmens. Diese ungewöhnliche Kombination ist
+        keine Zufälligkeit — sie ist die Grundlage meiner Arbeit.
+      </p>
+      <p>
+        Spiritualität ist für mich kein Rückzug aus dem Leben, sondern eine tiefere Art,
+        darin zu sein. Ich begleite Menschen, die an Wegkreuzungen stehen, die Sinn suchen
+        oder die in Krisen Orientierung brauchen — mit dem, was ich wirklich kenne: dem Leben selbst.
+      </p>
+      <p>
+        Ich arbeite in Leipzig und biete Gespräche in Präsenz sowie auf Wunsch auch
+        per Video an.
+      </p>
+    </div>
+
+    <div class="about__timeline">
+      {timeline.map((entry) => (
+        <div class="timeline__entry">
+          <span class="timeline__year">{entry.year}</span>
+          <p class="timeline__text">{entry.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 7rem 2rem;
+    background-color: var(--sand);
+  }
+
+  .about__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .about__text p {
+    margin-bottom: 1rem;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+
+  /* Timeline */
+  .about__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline__entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--warm);
+    transition: background 0.2s;
+  }
+
+  .timeline__entry:first-child {
+    border-top: 1px solid var(--warm);
+  }
+
+  .timeline__year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--terracotta);
+    font-weight: 300;
+    padding-top: 0.1rem;
+  }
+
+  .timeline__text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1024px) {
+    .about__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>
