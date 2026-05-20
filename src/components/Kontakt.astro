@@ -35,7 +35,12 @@
       </div>
     </div>
 
-    <form class="kontakt__form" name="kontakt" netlify>
+    <form class="kontakt__form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="e46d2f0b-7cba-4804-9431-80996bf06b2d" />
+      <input type="hidden" name="subject" value="Neue Kontaktanfrage – Sandhan Westphal" />
+      <input type="hidden" name="redirect" value="https://sandhan01.pages.dev/?danke=1" />
+      <input type="checkbox" name="botcheck" style="display:none" />
+
       <div class="form__field">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required placeholder="Ihr Name" />
