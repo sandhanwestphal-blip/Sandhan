@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Datenschutz – Sandhan Westphal" description="Datenschutzerklärung von Sandhan Westphal, Leipzig.">
+  <Nav />
+  <main class="legal">
+    <div class="legal__inner">
+      <h1>Datenschutzerklärung</h1>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Sandhan Jürgen Westphal<br />
+        Raimundstr. 10 B, 04177 Leipzig<br />
+        E-Mail: <a href="mailto:Sandhanwestphal@gmail.com">Sandhanwestphal@gmail.com</a>
+      </p>
+
+      <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+      <p>
+        Beim Besuch dieser Website werden durch den Hosting-Anbieter (Cloudflare)
+        automatisch Informationen in sogenannten Server-Log-Dateien gespeichert.
+        Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem,
+        Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage
+        und IP-Adresse. Diese Daten werden nicht mit anderen Datenquellen
+        zusammengeführt.
+      </p>
+
+      <h2>3. Kontaktformular</h2>
+      <p>
+        Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail,
+        Nachricht) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten gebe
+        ich nicht ohne Ihre Einwilligung weiter. Sie können der Speicherung
+        jederzeit widersprechen.
+      </p>
+
+      <h2>4. Google Fonts</h2>
+      <p>
+        Diese Website verwendet Google Fonts. Beim Laden der Seite wird eine
+        Verbindung zu Servern von Google LLC hergestellt. Dabei kann Ihre
+        IP-Adresse übertragen werden. Weitere Informationen finden Sie unter
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          policies.google.com/privacy
+        </a>.
+      </p>
+
+      <h2>5. Ihre Rechte</h2>
+      <p>
+        Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung
+        der Verarbeitung Ihrer gespeicherten personenbezogenen Daten sowie das
+        Recht auf Datenübertragbarkeit. Wenden Sie sich dazu per E-Mail an mich.
+      </p>
+
+      <h2>6. Beschwerderecht</h2>
+      <p>
+        Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde
+        zu beschweren. Die zuständige Behörde für Sachsen ist der Sächsische
+        Datenschutzbeauftragte.
+      </p>
+
+      <a href="/" class="back-link">← Zurück zur Startseite</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    padding: 10rem 2rem 6rem;
+    min-height: 100vh;
+    background: var(--sand);
+  }
+
+  .legal__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--deep);
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--deep);
+    margin: 2rem 0 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--terracotta);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+  }
+</style>
