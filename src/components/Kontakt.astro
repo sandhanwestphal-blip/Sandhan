@@ -5,10 +5,10 @@
   <div class="kontakt__inner">
     <div class="kontakt__info">
       <p class="section__eyebrow">Kontakt</p>
-      <h2 class="section__title">Gespräch beginnen</h2>
+      <h2 class="section__title">Bereit für den<br /><em>nächsten Schritt</em>?</h2>
       <p class="kontakt__lead">
-        Das Erstgespräch dauert etwa 20 Minuten und ist kostenfrei.
-        Ich freue mich darauf, Sie kennenzulernen.
+        Ich biete Dir einen Raum, in dem Deine Geschichte Platz findet – ohne Urteil,
+        aber mit der Klarheit von jemandem, der die Extreme des Lebens kennt.
       </p>
 
       <div class="kontakt__details">
@@ -22,7 +22,7 @@
         </div>
         <div class="kontakt__detail">
           <span class="kontakt__label">E-Mail</span>
-          <a href="mailto:Sandhanwestphal@gmail.com">Sandhanwestphal@gmail.com</a>
+          <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
         </div>
         <div class="kontakt__detail">
           <span class="kontakt__label">Angebot</span>
@@ -38,17 +38,17 @@
     <form class="kontakt__form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="e46d2f0b-7cba-4804-9431-80996bf06b2d" />
       <input type="hidden" name="subject" value="Neue Kontaktanfrage – Sandhan Westphal" />
-      <input type="hidden" name="redirect" value="https://sandhan01.pages.dev/?danke=1" />
+      <input type="hidden" name="redirect" value="https://sandhan01.pages.dev/danke" />
       <input type="checkbox" name="botcheck" style="display:none" />
 
       <div class="form__field">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Ihr Name" />
+        <input type="text" id="name" name="name" required placeholder="Dein Name" />
       </div>
 
       <div class="form__field">
         <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required placeholder="ihre@email.de" />
+        <input type="email" id="email" name="email" required placeholder="deine@email.de" />
       </div>
 
       <div class="form__field">
@@ -58,7 +58,7 @@
 
       <div class="form__field">
         <label for="nachricht">Nachricht</label>
-        <textarea id="nachricht" name="nachricht" rows="5" required placeholder="Was bewegt Sie?"></textarea>
+        <textarea id="nachricht" name="nachricht" rows="5" required placeholder="Deine Nachricht ..."></textarea>
       </div>
 
       <button type="submit" class="form__submit">Nachricht senden</button>
@@ -93,6 +93,12 @@
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: var(--deep);
     margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .section__title em {
+    font-style: italic;
+    color: var(--terracotta);
   }
 
   .kontakt__lead {
@@ -180,8 +186,8 @@
   .form__submit {
     align-self: flex-start;
     padding: 0.85rem 2rem;
-    background: var(--deep);
-    color: var(--warm);
+    background: var(--terracotta);
+    color: #fff;
     border: none;
     font-family: 'Jost', sans-serif;
     font-size: 0.85rem;
@@ -192,7 +198,7 @@
   }
 
   .form__submit:hover {
-    background: var(--terracotta);
+    background: var(--deep);
     transform: translateY(-2px);
   }
 

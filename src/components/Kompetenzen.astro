@@ -1,39 +1,39 @@
 ---
 const kompetenzen = [
   {
-    title: "NLP",
+    title: "Psychologie",
     items: [
-      "Neurolinguistisches Programmieren",
-      "Kommunikationsmuster erkennen",
-      "Glaubenssätze auflösen",
-      "Ressourcen aktivieren",
-    ],
-  },
-  {
-    title: "Hypnose",
-    items: [
+      "NLP Practitioner (Richard Bandler)",
       "Hypnose nach Milton Erickson",
-      "Tranceinduktion",
-      "Innere Heilungsprozesse",
-      "Tiefenentspannung",
+      "Trauma-Heilung",
+      "Glückstraining",
     ],
   },
   {
-    title: "Meditation & Achtsamkeit",
+    title: "Meditation",
     items: [
       "Vipassana",
       "ZaZen",
-      "Atemarbeit",
-      "Stille und Präsenz",
+      "Osho-Meditationen",
+      "Über 40 Jahre Praxis",
     ],
   },
   {
-    title: "Weitere Angebote",
+    title: "Coaching",
     items: [
-      "Trauma-Heilung",
-      "Coaching",
-      "Reiki",
-      "Körperarbeit",
+      "Personal Power (Tony Robbins)",
+      "Reiki-Meister",
+      "Sinnfragen & Lebensübergänge",
+      "Berufliche Umbrüche",
+    ],
+  },
+  {
+    title: "Körperarbeit",
+    items: [
+      "Rebalancing Tiefengewebsmassage",
+      "Spinal Adjustment / Chiropraktik",
+      "Wurzelmassage",
+      "Dominante Massage",
     ],
   },
 ];
@@ -42,8 +42,8 @@ const kompetenzen = [
 <section class="kompetenzen" id="kompetenzen">
   <div class="kompetenzen__inner">
     <div class="kompetenzen__header">
-      <p class="section__eyebrow">Kompetenzen</p>
-      <h2 class="section__title">Womit ich arbeite</h2>
+      <p class="section__eyebrow">Kompetenzen &amp; Methoden</p>
+      <h2 class="section__title">Körper, Geist und Seele als Einheit</h2>
     </div>
 
     <div class="kompetenzen__grid">
@@ -67,7 +67,7 @@ const kompetenzen = [
 <style>
   .kompetenzen {
     padding: 7rem 2rem;
-    background-color: var(--warm);
+    background-color: var(--sand);
   }
 
   .kompetenzen__inner {
@@ -99,12 +99,13 @@ const kompetenzen = [
   }
 
   .kompetenz__card {
-    background: var(--sand);
+    background: var(--warm);
     padding: 2rem 1.75rem;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background 0.2s;
   }
 
   .kompetenz__card:hover {
+    background: #ddd0c0;
     transform: translateY(-4px);
   }
 
