@@ -11,27 +11,16 @@
         aber mit der Klarheit von jemandem, der die Extreme des Lebens kennt.
       </p>
 
-      <div class="kontakt__details">
-        <div class="kontakt__detail">
-          <span class="kontakt__label">Adresse</span>
-          <span>Raimundstr. 10 B<br />04177 Leipzig</span>
-        </div>
-        <div class="kontakt__detail">
-          <span class="kontakt__label">Telefon</span>
-          <a href="tel:+491715882385">+49 171 5882385</a>
-        </div>
-        <div class="kontakt__detail">
-          <span class="kontakt__label">E-Mail</span>
-          <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
-        </div>
-        <div class="kontakt__detail">
-          <span class="kontakt__label">Angebot</span>
-          <span>Präsenz & per Zoom</span>
-        </div>
-        <div class="kontakt__detail">
-          <span class="kontakt__label">Honorar</span>
-          <span>1 Stunde &mdash; &euro; 80.&ndash;</span>
-        </div>
+      <div class="kontakt__preisbox">
+        <strong class="kontakt__preis">Eine Sitzung: 80,&ndash; &euro; / Stunde</strong>
+        <span class="kontakt__gratis">20 Minuten Kennenlern&shy;sitzung kostenlos</span>
+        <span class="kontakt__format">Persönlich in Leipzig &nbsp;&middot;&nbsp; Online per Zoom</span>
+      </div>
+
+      <div class="kontakt__person">
+        <strong>Sandhan Westphal</strong><br />
+        Leipzig, Deutschland<br />
+        <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
       </div>
     </div>
 
@@ -108,34 +97,52 @@
     max-width: 380px;
   }
 
-  .kontakt__details {
+  .kontakt__preisbox {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.3rem;
+    padding: 1.5rem;
+    background: var(--warm);
+    border-left: 3px solid var(--terracotta);
+    margin-bottom: 1.5rem;
   }
 
-  .kontakt__detail {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 1rem;
-    font-size: 0.9rem;
+  .kontakt__preis {
+    font-size: 1.05rem;
+    color: var(--deep);
+    font-weight: 500;
   }
 
-  .kontakt__label {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .kontakt__gratis {
+    font-size: 0.88rem;
     color: var(--terracotta);
-    padding-top: 0.1rem;
+    font-weight: 500;
   }
 
-  .kontakt__detail a {
+  .kontakt__format {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .kontakt__person {
+    font-size: 0.92rem;
     color: var(--text);
-    transition: color 0.2s;
+    line-height: 1.9;
   }
 
-  .kontakt__detail a:hover {
+  .kontakt__person strong {
+    color: var(--deep);
+    font-weight: 500;
+  }
+
+  .kontakt__person a {
     color: var(--terracotta);
+    transition: opacity 0.2s;
+  }
+
+  .kontakt__person a:hover {
+    opacity: 0.75;
   }
 
   /* Form */
