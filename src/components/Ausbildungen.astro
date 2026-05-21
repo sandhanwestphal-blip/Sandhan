@@ -1,0 +1,180 @@
+---
+const ausbildungen = [
+  {
+    year: "1977",
+    title: "Musikstudium",
+    beschreibung: "Hochschule Graz, Österreich",
+  },
+  {
+    year: "1988",
+    title: "Rebalancing Tiefengewebsmassage",
+    beschreibung: "Poona, Indien",
+  },
+  {
+    year: "1989",
+    title: "Spinal Adjustment / Chiropraktik",
+    beschreibung: "Poona, Indien",
+  },
+  {
+    year: "1989",
+    title: "Vipassana Meditation",
+    beschreibung: "Poona, Indien",
+  },
+  {
+    year: "1989",
+    title: "ZaZen Meditationsretreat",
+    beschreibung: "Poona, Indien",
+  },
+  {
+    year: "1990",
+    title: "NLP Practitioner",
+    beschreibung: "Richard Bandler, Schweiz",
+  },
+  {
+    year: "1990",
+    title: "Hypnose nach Milton Erickson",
+    beschreibung: "Poona, Indien",
+  },
+  {
+    year: "1997",
+    title: "Personal Power",
+    beschreibung: "Tony Robbins Course",
+  },
+  {
+    year: "2008",
+    title: "Glückstraining",
+    beschreibung: "Ella Kensington, München",
+  },
+  {
+    year: "2009",
+    title: "Reiki Meister",
+    beschreibung: "Sybille Paskuda, München",
+  },
+  {
+    year: "2019–22",
+    title: "Trauma Heilung",
+    beschreibung: "Leipzig",
+  },
+  {
+    year: "2022",
+    title: "Souveräne Dominanz & Dominante Massage",
+    beschreibung: "LUX Zentrum Berlin",
+  },
+  {
+    year: "2023",
+    title: "Wurzelmassage",
+    beschreibung: "Anukan Tantra Zentrum Dresden",
+  },
+];
+---
+
+<section class="ausbildungen" id="ausbildungen">
+  <div class="ausbildungen__inner">
+    <div class="ausbildungen__header">
+      <p class="section__eyebrow">Werdegang</p>
+      <h2 class="section__title">Ausbildungen &amp; Erfahrungen</h2>
+    </div>
+
+    <div class="ausbildungen__grid">
+      {ausbildungen.map((a) => (
+        <div class="ausbildung__entry">
+          <span class="ausbildung__year">{a.year}</span>
+          <div class="ausbildung__content">
+            <h3 class="ausbildung__title">{a.title}</h3>
+            <p class="ausbildung__text">{a.beschreibung}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ausbildungen {
+    padding: 7rem 2rem;
+    background-color: var(--deep);
+    color: var(--warm);
+  }
+
+  .ausbildungen__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ausbildungen__header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--warm);
+  }
+
+  .ausbildungen__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .ausbildung__entry {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba(232, 221, 208, 0.15);
+    transition: background 0.2s;
+    padding-right: 2rem;
+  }
+
+  .ausbildung__entry:hover {
+    background: rgba(232, 221, 208, 0.04);
+  }
+
+  .ausbildung__year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--terracotta);
+    font-weight: 300;
+    padding-top: 0.15rem;
+    white-space: nowrap;
+  }
+
+  .ausbildung__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--warm);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+
+  .ausbildung__text {
+    font-size: 0.88rem;
+    color: rgba(232, 221, 208, 0.7);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    .ausbildungen__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ausbildung__entry {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ausbildung__entry {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+</style>

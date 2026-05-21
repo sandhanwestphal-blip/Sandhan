@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Datenschutz – Sandhan Westphal" description="Datenschutzerklärung von Sandhan Westphal, Leipzig.">
+  <Nav />
+  <main class="legal">
+    <div class="legal__inner">
+      <h1>Datenschutzerklärung</h1>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Sandhan Jürgen Westphal<br />
+        Raimundstr. 10 B, 04177 Leipzig<br />
+        Tel.: +49 171 5882385<br />
+        E-Mail: <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
+      </p>
+
+      <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+      <p>
+        Beim Besuch dieser Website werden durch den Hosting-Anbieter (Cloudflare)
+        automatisch Informationen in sogenannten Server-Log-Dateien gespeichert.
+        Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem,
+        Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage
+        und IP-Adresse. Diese Daten werden nicht mit anderen Datenquellen
+        zusammengeführt.
+      </p>
+
+      <h2>3. Cookies &amp; Tracking</h2>
+      <p>
+        Es werden keine eigenen Cookies gesetzt, kein Tracking durchgeführt
+        und keine Analysedienste eingesetzt.
+      </p>
+
+      <h2>4. Kontaktformular</h2>
+      <p>
+        Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail,
+        Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet
+        (Rechtsgrundlage: Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;b DSGVO).
+        Eine Weitergabe an Dritte findet nicht statt. Die Daten werden gelöscht,
+        sobald Ihre Anfrage abschließend beantwortet ist, sofern keine gesetzlichen
+        Aufbewahrungspflichten entgegenstehen.
+      </p>
+
+      <h2>5. Google Fonts</h2>
+      <p>
+        Diese Website verwendet Google Fonts. Beim Laden der Seite wird eine
+        Verbindung zu Servern von Google LLC hergestellt. Dabei kann Ihre
+        IP-Adresse übertragen werden. Weitere Informationen finden Sie unter
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          policies.google.com/privacy
+        </a>.
+      </p>
+
+      <h2>6. Ihre Rechte</h2>
+      <p>
+        Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung
+        der Verarbeitung Ihrer gespeicherten personenbezogenen Daten sowie das
+        Recht auf Datenübertragbarkeit. Wenden Sie sich dazu per E-Mail an mich.
+      </p>
+
+      <h2>7. Stand</h2>
+      <p>Mai 2026</p>
+
+      <h2>8. Beschwerderecht</h2>
+      <p>
+        Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde
+        zu beschweren. Die zuständige Behörde für Sachsen ist der Sächsische
+        Datenschutzbeauftragte.
+      </p>
+
+      <a href="/" class="back-link">← Zurück zur Startseite</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    padding: 10rem 2rem 6rem;
+    min-height: 100vh;
+    background: var(--sand);
+  }
+
+  .legal__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--deep);
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--deep);
+    margin: 2rem 0 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--terracotta);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+  }
+</style>

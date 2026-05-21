@@ -1,0 +1,211 @@
+---
+---
+
+<section class="kontakt" id="kontakt">
+  <div class="kontakt__inner">
+    <div class="kontakt__info">
+      <p class="section__eyebrow">Kontakt</p>
+      <h2 class="section__title">Bereit für den<br /><em>nächsten Schritt</em>?</h2>
+      <p class="kontakt__lead">
+        Ich biete Dir einen Raum, in dem Deine Geschichte Platz findet – ohne Urteil,
+        aber mit der Klarheit von jemandem, der die Extreme des Lebens kennt.
+      </p>
+
+      <div class="kontakt__details">
+        <div class="kontakt__detail">
+          <span class="kontakt__label">Adresse</span>
+          <span>Raimundstr. 10 B<br />04177 Leipzig</span>
+        </div>
+        <div class="kontakt__detail">
+          <span class="kontakt__label">Telefon</span>
+          <a href="tel:+491715882385">+49 171 5882385</a>
+        </div>
+        <div class="kontakt__detail">
+          <span class="kontakt__label">E-Mail</span>
+          <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
+        </div>
+        <div class="kontakt__detail">
+          <span class="kontakt__label">Angebot</span>
+          <span>Präsenz & per Zoom</span>
+        </div>
+        <div class="kontakt__detail">
+          <span class="kontakt__label">Honorar</span>
+          <span>1 Stunde &mdash; &euro; 80.&ndash;</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="kontakt__form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="e46d2f0b-7cba-4804-9431-80996bf06b2d" />
+      <input type="hidden" name="subject" value="Neue Kontaktanfrage – Sandhan Westphal" />
+      <input type="hidden" name="redirect" value="https://sandhan01.pages.dev/danke" />
+      <input type="checkbox" name="botcheck" style="display:none" />
+
+      <div class="form__field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Dein Name" />
+      </div>
+
+      <div class="form__field">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required placeholder="deine@email.de" />
+      </div>
+
+      <div class="form__field">
+        <label for="telefon">Telefon (optional)</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="+49 …" />
+      </div>
+
+      <div class="form__field">
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" rows="5" required placeholder="Deine Nachricht ..."></textarea>
+      </div>
+
+      <button type="submit" class="form__submit">Nachricht senden</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .kontakt {
+    padding: 7rem 2rem;
+    background-color: var(--sand);
+  }
+
+  .kontakt__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--deep);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .section__title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .kontakt__lead {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    max-width: 380px;
+  }
+
+  .kontakt__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .kontakt__detail {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .kontakt__label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 0.1rem;
+  }
+
+  .kontakt__detail a {
+    color: var(--text);
+    transition: color 0.2s;
+  }
+
+  .kontakt__detail a:hover {
+    color: var(--terracotta);
+  }
+
+  /* Form */
+  .kontakt__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form__field label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .form__field input,
+  .form__field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--warm);
+    padding: 0.6rem 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+
+  .form__field input:focus,
+  .form__field textarea:focus {
+    border-bottom-color: var(--terracotta);
+  }
+
+  .form__field input::placeholder,
+  .form__field textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.6;
+  }
+
+  .form__submit {
+    align-self: flex-start;
+    padding: 0.85rem 2rem;
+    background: var(--terracotta);
+    color: #fff;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .form__submit:hover {
+    background: var(--deep);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 1024px) {
+    .kontakt__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

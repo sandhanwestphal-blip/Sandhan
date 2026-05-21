@@ -1,0 +1,135 @@
+---
+const timeline = [
+  {
+    year: "1977",
+    text: "Musikstudium an der Hochschule Graz · Freier Musiker in Berlin",
+  },
+  {
+    year: "1980",
+    text: "Reise nach Indien · Schüler von Osho (Bhagwan) · Beginn der spirituellen Praxis",
+  },
+  {
+    year: "1990er",
+    text: "Musikvertrieb · IT Service bei Siemens · Erste psychologische Ausbildungen",
+  },
+  {
+    year: "2010",
+    text: "Gründung einer Firmengruppe im Bereich Photovoltaik & Immobilien",
+  },
+  {
+    year: "2025",
+    text: "Fokus auf psychologische & spirituelle Beratung – die Essenz eines gelebten Lebens",
+  },
+];
+---
+
+<section class="about" id="ueber-mich">
+  <div class="about__inner">
+    <div class="about__text">
+      <p class="section__eyebrow">Über mich</p>
+      <h2 class="section__title">Ein Leben voller Extreme und Synthesen</h2>
+      <p>
+        Mein Lebensweg verlief alles andere als gewöhnlich. Er ist geprägt von einer tiefen
+        Neugier auf das Leben in all seinen Facetten – von der Musik über Meditation bis hin
+        zur Wirtschaft.
+      </p>
+      <p>
+        Mit 23 flog ich nach Indien, um Schüler von Osho (Bhagwan) zu werden. Diese Begegnung
+        hat mein Verständnis von Bewusstsein, Stille und dem Wesen des Menschen grundlegend
+        geprägt – und begleitet mich bis heute.
+      </p>
+      <p>
+        Von der IT bei Siemens bis zur Gründung einer Firmengruppe im Bereich Photovoltaik
+        und Immobilien habe ich gelernt, was es bedeutet, Verantwortung in der materiellen
+        Welt zu tragen. 2025 habe ich dieses Engagement beendet – um mich voll und ganz
+        der Begleitung von Menschen zu widmen.
+      </p>
+    </div>
+
+    <div class="about__timeline">
+      {timeline.map((entry) => (
+        <div class="timeline__entry">
+          <span class="timeline__year">{entry.year}</span>
+          <p class="timeline__text">{entry.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 7rem 2rem;
+    background-color: var(--warm);
+  }
+
+  .about__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .about__text p {
+    margin-bottom: 1rem;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+
+  /* Timeline */
+  .about__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline__entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--warm);
+    transition: background 0.2s;
+  }
+
+  .timeline__entry:first-child {
+    border-top: 1px solid var(--warm);
+  }
+
+  .timeline__year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--terracotta);
+    font-weight: 300;
+    padding-top: 0.1rem;
+  }
+
+  .timeline__text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1024px) {
+    .about__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

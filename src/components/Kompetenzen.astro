@@ -1,0 +1,177 @@
+---
+const kompetenzen = [
+  {
+    title: "Psychologie",
+    items: [
+      "NLP Practitioner (Richard Bandler)",
+      "Hypnose nach Milton Erickson",
+      "Trauma-Heilung",
+      "Glückstraining",
+    ],
+  },
+  {
+    title: "Meditation",
+    items: [
+      "Vipassana",
+      "ZaZen",
+      "Osho-Meditationen",
+      "Über 40 Jahre Praxis",
+    ],
+  },
+  {
+    title: "Coaching",
+    items: [
+      "Personal Power (Tony Robbins)",
+      "Reiki-Meister",
+      "Sinnfragen & Lebensübergänge",
+      "Berufliche Umbrüche",
+    ],
+  },
+  {
+    title: "Körperarbeit",
+    items: [
+      "Rebalancing Tiefengewebsmassage",
+      "Spinal Adjustment / Chiropraktik",
+      "Wurzelmassage",
+      "Dominante Massage",
+    ],
+  },
+];
+---
+
+<section class="kompetenzen" id="kompetenzen">
+  <div class="kompetenzen__inner">
+    <div class="kompetenzen__header">
+      <p class="section__eyebrow">Kompetenzen &amp; Methoden</p>
+      <h2 class="section__title">Körper, Geist und Seele als Einheit</h2>
+    </div>
+
+    <div class="kompetenzen__grid">
+      {kompetenzen.map((k) => (
+        <div class="kompetenz__card">
+          <div class="kompetenz__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <h3 class="kompetenz__title">{k.title}</h3>
+          <ul class="kompetenz__list">
+            {k.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .kompetenzen {
+    padding: 7rem 2rem;
+    background-color: var(--sand);
+  }
+
+  .kompetenzen__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .kompetenzen__header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--deep);
+  }
+
+  .kompetenzen__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .kompetenz__card {
+    background: var(--warm);
+    padding: 2rem 1.75rem;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .kompetenz__card:hover {
+    background: #ddd0c0;
+    transform: translateY(-4px);
+  }
+
+  .kompetenz__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1.25rem;
+    width: 28px;
+  }
+
+  .kompetenz__icon span {
+    display: block;
+    height: 1.5px;
+    background: var(--terracotta);
+  }
+
+  .kompetenz__icon span:nth-child(2) {
+    width: 70%;
+  }
+
+  .kompetenz__icon span:nth-child(3) {
+    width: 45%;
+  }
+
+  .kompetenz__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--deep);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .kompetenz__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kompetenz__list li {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .kompetenz__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+
+  @media (max-width: 1024px) {
+    .kompetenzen__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .kompetenzen__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

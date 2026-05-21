@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Impressum – Sandhan Westphal" description="Impressum und rechtliche Angaben von Sandhan Westphal, Leipzig.">
+  <Nav />
+  <main class="legal">
+    <div class="legal__inner">
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>
+        Sandhan Jürgen Westphal<br />
+        Raimundstr. 10 B<br />
+        04177 Leipzig
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: <a href="tel:+491715882385">+49 171 5882385</a><br />
+        E-Mail: <a href="mailto:sandhan.westphal@gmx.de">sandhan.westphal@gmx.de</a>
+      </p>
+
+      <h2>Hinweis zur Beratung</h2>
+      <p>
+        Die angebotenen Leistungen sind keine medizinischen, psychotherapeutischen
+        oder heilpraktischen Behandlungen im Sinne des deutschen Heilmittelgesetzes.
+        Sandhan Jürgen Westphal ist weder Arzt, Psychotherapeut noch Heilpraktiker.
+        Die Beratung basiert auf persönlicher Lebens- und Schulungserfahrung.
+      </p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf
+        diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis
+        10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+        oder gespeicherte fremde Informationen zu überwachen.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+        unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+        Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+        Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors.
+      </p>
+
+      <a href="/" class="back-link">← Zurück zur Startseite</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    padding: 10rem 2rem 6rem;
+    min-height: 100vh;
+    background: var(--sand);
+  }
+
+  .legal__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--deep);
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--deep);
+    margin: 2rem 0 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--terracotta);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+  }
+</style>

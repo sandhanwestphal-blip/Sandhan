@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Danke – Sandhan Westphal" description="Ihre Nachricht wurde erfolgreich gesendet.">
+  <Nav />
+  <main class="danke">
+    <div class="danke__inner">
+      <p class="eyebrow">Nachricht erhalten</p>
+      <h1>Vielen Dank</h1>
+      <p class="lead">
+        Ihre Nachricht ist bei mir angekommen. Ich melde mich in der Regel
+        innerhalb von 1–2 Werktagen bei Ihnen.
+      </p>
+      <a href="/" class="cta">Zurück zur Startseite</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .danke {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+    background: var(--sand);
+  }
+
+  .danke__inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    max-width: 440px;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: var(--terracotta);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+
+  .cta:hover {
+    background: var(--deep);
+  }
+</style>
